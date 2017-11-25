@@ -21,16 +21,19 @@ public class Calculator {
                     //The second word is the angle
                     double angle = Double.parseDouble(expression[1]);
                     switch (trigFunction) {
-                        case "cos":
-                            //Printf for displaying the double with two decimal places not 1 as in example
-                            System.out.printf("%.2f\n", Math.cos(Math.toRadians(angle)));
-                            break;
-                        case "sin":
-                            System.out.printf("%.2f\n", Math.sin(Math.toRadians(angle)));
-                            break;
-                        case "tan":
-                            System.out.printf("%.2f\n", Math.tan(Math.toRadians(angle)));
-                            break;
+                    case "cos":
+                        //Printf for displaying the double with two decimal places not 1 as in example
+                        System.out.printf("%.2f\n", Math.cos(Math.toRadians(angle)));
+                        break;
+                    case "sin":
+                        System.out.printf("%.2f\n", Math.sin(Math.toRadians(angle)));
+                        break;
+                    case "tan":
+                        System.out.printf("%.2f\n", Math.tan(Math.toRadians(angle)));
+                        break;
+                    default:
+                        System.out.println("Invalid Input");
+                        break;
                     }
                 } else if (expression.length == 3) { //If its containing 3 words then its an arithmetic function
                     //Operand 1
@@ -40,24 +43,27 @@ public class Calculator {
                     //Operand 2
                     double op2 = Double.parseDouble(expression[2]);
                     switch (operation) {
-                        case '+':
-                            System.out.printf("%.2f\n", op1 + op2);
-                            break;
-                        case '-':
-                            System.out.printf("%.2f\n", op1 - op2);
-                            break;
-                        case '*':
-                            System.out.printf("%.2f\n", op1 * op2);
-                            break;
-                        case '/':
-                            System.out.printf("%.2f\n", op1 / op2);
-                            break;
-                        case '^':
-                            System.out.printf("%.2f\n", Math.pow(op1, op2));
-                            break;
+                    case '+':
+                        System.out.printf("%.2f\n", op1 + op2);
+                        break;
+                    case '-':
+                        System.out.printf("%.2f\n", op1 - op2);
+                        break;
+                    case '*':
+                        System.out.printf("%.2f\n", op1 * op2);
+                        break;
+                    case '/':
+                        System.out.printf("%.2f\n", op1 / op2);
+                        break;
+                    case '^':
+                        System.out.printf("%.2f\n", Math.pow(op1, op2));
+                        break;
+                    default:
+                        System.out.println("Invalid Input");
+                        break;
                     }
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 System.out.println("Invalid Input");
             }
             return true;
